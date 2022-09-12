@@ -11,7 +11,7 @@ int i;
 for (i = 10; i <= 20; i++)
 {
 putchar((i % 10) + '0');
-if (i != 57)
+if (i != 19)
 {
 	putchar(',');
 	putchar(',');
