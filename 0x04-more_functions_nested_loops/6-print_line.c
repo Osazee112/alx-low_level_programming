@@ -7,7 +7,7 @@
  * Return: returns nothing
  */
 
-void print_line(int n)
+void print_lines(int n)
 {
 	while (n-- > 0)
 	{
