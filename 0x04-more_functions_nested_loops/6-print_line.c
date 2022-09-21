@@ -4,7 +4,7 @@
 /**
  * print_line - prints a straight line
  * @n: parameter
- * Return: return nothing
+ * Return: returns nothing
  */
 
 void print_line(int n)
