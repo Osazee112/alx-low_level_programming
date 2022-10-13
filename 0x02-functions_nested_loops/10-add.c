@@ -9,7 +9,7 @@ int main()
 {
 	int a,b,n;
 	n = add(a,b);
-	printf("enter two numbers %d\n"a,b);
+	printf("enter two numbers %d\n",a,b);
 	scanf("%d,%d\n", &a,&b);
 	printf("return %d\n",add(a,b));
 	return (n);
