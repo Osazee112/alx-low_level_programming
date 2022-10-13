@@ -9,12 +9,12 @@ int main()
 {
 	int a,b,n;
 	n = add(a,b);
-	printf("enter two numbers %d\n");
+	printf("enter two numbers %d\n"a,b);
 	scanf("%d,%d\n", &a,&b);
 	printf("return %d\n",add(a,b));
 	return (n);
 }
- int add(int, int)
+ int add(int a, int b)
 {
 	return(a + b);
 }
