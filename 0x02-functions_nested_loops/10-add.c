@@ -7,10 +7,9 @@
 
 int main()
 {
-	int a,b;
-	a >= 9;
-	b >= 9;
-	n;
+	int a,b,n;
+	a = 40;
+	b = 30;
 	n = add(a,b);
 	printf("enter number:%d,%d\n",a,b);
 	scanf("%d,%d\n", &a,&b);
