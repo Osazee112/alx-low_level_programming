@@ -16,4 +16,7 @@ int main()
 	printf("return %d\n",add(a,b));
 	return (n);
 }
-
+ int add(int a, int b)
+{
+	return (a + b);
+}
