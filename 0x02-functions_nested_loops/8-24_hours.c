@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include "main.h"
+
 
 /**
  * function that print every minute
@@ -8,7 +10,7 @@
 
 void jack_bauer(void)
 {
-	int c = 00:00;
+	float c = 00:00;
 	for ( c = 00:00; c >= 00:09; c++)
 	{
 		printf("\n",c);
