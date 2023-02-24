@@ -1,39 +1,33 @@
 #!/usr/bin/python3
-"""
-The perimeter of the island
-"""
+"""Module that calculates the perimeter of an island in a grid."""
+
+
+def num_water_neighbors(grid, i, j):
+    """Returns the number of water neighbors a cell has in a grid."""
+
+    num = 0
+
+    if i <= 0 or not grid[i - 1][j]:
+        num += 1
+    if j <= 0 or not grid[i][j - 1]:
+        num += 1
+    if j >= len(grid[i]) - 1 or not grid[i][j + 1]:
+        num += 1
+    if i >= len(grid) - 1 or not grid[i + 1][j]:
+        num += 1
+
+    return num
 
 
 def island_perimeter(grid):
-    """
-    Function that calculate the perimeter of the island
-    described in grid.
-    Args:
-       grid: Matrix that emulate the island grid.
-    Return:
-       Returns the perimeter of the island described in grid.
-    """
-    count = 0
-    connection_h = 0
-    connection_v = 0
-    # Count horizontal connection of numbers 1
-    for _list in grid:
-        i = 1
-        for number in _list:
-            if number == 1:
-                count += 1
-                if i < len(_list) and number == _list[i]:
-                    connection_h += 1
-            i += 1
-    # Count vertical connection of numbers 1
-    for index, _list in enumerate(grid):
-        for i in range(0, len(_list)):
-            if index < len(grid) - 1:
-                if _list[i] == 1 and _list[i] == grid[index + 1][i]:
-                    connection_v += 1
-    total = count * 4
-    horizontal = connection_h * 2
-    vertical = connection_v * 2
-    perimeter = total - horizontal - vertical
+    """Returns the perimeter of the island in grid."""
+
+    perimeter = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if grid[i][j]:
+                perimeter += num_water_neighbors(grid, i, j)
+
     return perimeter
+
 
